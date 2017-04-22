@@ -1,0 +1,111 @@
+/*** Everything for the nav-bar ****/
+
+/* 
+yellow: #e4bd32
+gold: #d39d17
+lightblue: #70A8B4 
+blue: #43879e
+red: #d52b0a
+*/
+
+  header {
+    position:relative;
+    top: -8px;
+    left: -10px;
+    right: -10px;
+    height: 44px;
+    width: 100%;
+    background-color: #70A8B4;
+    border-bottom: 3.5px solid black;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+    z-index: 200;
+  }
+
+  /* Home Button */
+  .home-nav-background {
+    position: fixed;
+    background-image: url("images/Corner_yellow.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 380px;
+    width:500px;
+    right:0px;
+    top:0px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    z-index:250;
+  }
+  .homebtn {
+    position: fixed;
+    background-image: url("images/LogoYM_fat_black.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 2px;
+    right: 2px;
+    width: 250px;
+    height: 110px;
+    cursor: pointer;
+    z-index:260;
+  }
+
+  /* Menu Button */
+  .menubtn {
+    position: absolute;
+    background-image: url("images/menu_btn_black.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 36px;
+    width: 40px;
+    left: 10px;
+    top: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+  }
+
+  /* Home button on hover & focus */
+  .homebtn:hover, .homebtn:focus {
+  }
+
+  /* Menu button on hover & focus */
+  .menubtn:hover, .menubtn:focus {
+  }
+
+  /* Menu Content (Hidden by Default) */
+  .menu-content {
+    display: none;
+    position: relative;
+    top: 44px;
+    left: 8px;
+    background-color: #f9f9f9;
+    max-width: 180px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .menu-content a {
+    color: black;
+    padding: 12px 5px 12px 18px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .menu-content a:hover {background-color: #e4bd32}
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+  
+  /* End dropdown box */
+  /* Non-mobile, grid */
+  @media only screen and (min-width: 550px) {
+
+  }
+
+/*** End nav-bar ***/
