@@ -8,7 +8,9 @@ blue: #43879e
 red: #d52b0a
 */
 
+  /*** General navigation bar ***/
   header {
+    font-family: 'Lora', serif;
     position:relative;
     top: -8px;
     left: -10px;
@@ -16,20 +18,22 @@ red: #d52b0a
     height: 44px;
     width: 100%;
     background-color: #70A8B4;
-    border-bottom: 3.5px solid black;
-    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+    border-bottom: 2px solid black;
+    /*box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);*/
     z-index: 200;
   }
 
-  /* Home Button */
+  /*** Home Button ***/
   .home-nav-background {
     position: fixed;
     background-image: url("images/Corner_yellow.png");
-    background-position: right top;
     background-repeat: no-repeat;
+    background-position: right top;
     background-size: 100%;
-    height: 380px;
-    width:500px;
+    /*height: 100px;*/
+    width:50%;
+    height: 0;
+    padding-bottom: 50%;
     right:0px;
     top:0px;
     border: none;
@@ -44,13 +48,18 @@ red: #d52b0a
     background-size: 100%;
     top: 2px;
     right: 2px;
-    width: 250px;
-    height: 110px;
+    width: 25%;
+    height: 0;
+    padding-bottom: 11%;
     cursor: pointer;
     z-index:260;
   }
+  /* Home button on hover & focus */
+  .homebtn:hover, .homebtn:focus {
+    background-image: url("images/LogoYM_fat_white.png");
+  }
 
-  /* Menu Button */
+  /*** Menu Button ***/
   .menubtn {
     position: absolute;
     background-image: url("images/menu_btn_black.png");
@@ -65,16 +74,11 @@ red: #d52b0a
     cursor: pointer;
     background-color: rgba(0,0,0,0);
   }
-
-  /* Home button on hover & focus */
-  .homebtn:hover, .homebtn:focus {
-  }
-
   /* Menu button on hover & focus */
   .menubtn:hover, .menubtn:focus {
   }
 
-  /* Menu Content (Hidden by Default) */
+  /*** Menu Content (Hidden by Default) ***/
   .menu-content {
     display: none;
     position: relative;
@@ -88,24 +92,53 @@ red: #d52b0a
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  /* Links inside the dropdown */
   .menu-content a {
     color: black;
     padding: 12px 5px 12px 18px;
     text-decoration: none;
     display: block;
   }
+  /* Change color of menu links on hover */
+  .menu-content a:hover {
+    background-color: #e4bd32;
+  }
+  /* Show the menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display:block;
+  }
 
-  /* Change color of dropdown links on hover */
-  .menu-content a:hover {background-color: #e4bd32}
-
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
-  
+  /*** Navigation path ***/
+  .nav-path {
+    font-style: italic;
+    font-weight: 900;
+    position: absolute;
+    top: -5px;
+    left: 60px;
+  }
+  .nav-path a {
+    color: black;
+    padding: 0px 2px 0px 2px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .nav-path a:hover {
+    color: #e4bd32;
+  }
   /* End dropdown box */
-  /* Non-mobile, grid */
-  @media only screen and (min-width: 550px) {
 
+  /* Non-mobile, grid */
+  @media only screen and (min-width: 600px) {
+    header {
+      border-bottom: 3.5px solid black;
+    }
+    .homebtn {
+      max-width: 250px;
+      max-height: 110px;
+    }
+    .home-nav-background {
+      max-width: 500px;
+      max-height: 380px;
+    }
   }
 
 /*** End nav-bar ***/
