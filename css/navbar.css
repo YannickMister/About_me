@@ -6,15 +6,14 @@ gold: #d39d17
 lightblue: #70A8B4 
 blue: #43879e
 red: #d52b0a
+geit: #8ABFD0
 */
 
   /*** General navigation bar ***/
   header {
     font-family: 'Lora', serif;
     position:relative;
-    top: -8px;
-    left: -10px;
-    right: -10px;
+    top: -50px;
     height: 44px;
     width: 100%;
     background-color: #70A8B4;
@@ -23,14 +22,13 @@ red: #d52b0a
     z-index: 200;
   }
 
-  /*** Home Button ***/
+/*** Home Button ***/
   .home-nav-background {
     position: fixed;
     background-image: url("images/Corner_yellow.png");
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 100%;
-    /*height: 100px;*/
     width:50%;
     height: 0;
     padding-bottom: 50%;
@@ -76,28 +74,78 @@ red: #d52b0a
   }
   /* Menu button on hover & focus */
   .menubtn:hover, .menubtn:focus {
+    background-image: url("images/menu_btn_white.png");
   }
 
-  /*** Menu Content (Hidden by Default) ***/
+/*** Menu Content (Hidden by Default) ***/
   .menu-content {
     display: none;
     position: relative;
-    top: 44px;
+    top: 42px;
     left: 8px;
-    background-color: #f9f9f9;
-    max-width: 180px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
+    max-width: 200px;
+    border: 2px solid black;
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 500;
   }
-  .menu-content a {
+
+  /* hover buttons in the menu */
+  .dropbtn {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    background-color: white;
+    height: 44px;
+    width: 100%;
     color: black;
     padding: 12px 5px 12px 18px;
-    text-decoration: none;
     display: block;
   }
+
+  /* Change color of menu links on hover */
+  .dropbtn:hover {
+    background-color: #e4bd32;
+    font-style: italic;
+  }
+
+/*** Hoverable dropdown menu ***/
+  /* total div */
+  .dropcontent {
+    display: none;
+    position: absolute;
+    left: 44px;
+    border: 2px solid black;
+    min-width: 180px;
+    box-shadow: -10px 0px 4px 0px rgba(0,0,0,0.2);
+  }
+
+  /* dropbutton itself */
+  .dropitem {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    height: 44px;
+    text-align: left;
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 12px 5px 12px 18px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* Change color of menu links on hover */
+  .dropitem:hover{
+    background-color: #e4bd32;
+    font-style: italic;
+  }
+
+  /* display on hover */
+  .dropdiv:hover .dropcontent {
+    display: block;
+  }
+
   /* Change color of menu links on hover */
   .menu-content a:hover {
     background-color: #e4bd32;
@@ -106,30 +154,18 @@ red: #d52b0a
   .show {
     display:block;
   }
+/* End dropdown box */
 
-  /*** Navigation path ***/
+/*** Navigation path ***/
+/* don't show on small screen */
   .nav-path {
-    font-style: italic;
-    font-weight: 900;
-    position: absolute;
-    top: -5px;
-    left: 60px;
+    display: none;
   }
-  .nav-path a {
-    color: black;
-    padding: 0px 2px 0px 2px;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .nav-path a:hover {
-    color: #e4bd32;
-  }
-  /* End dropdown box */
 
   /* Non-mobile, grid */
   @media only screen and (min-width: 600px) {
     header {
-      border-bottom: 3.5px solid black;
+      border-bottom: 2px solid black;
     }
     .homebtn {
       max-width: 250px;
@@ -138,6 +174,25 @@ red: #d52b0a
     .home-nav-background {
       max-width: 500px;
       max-height: 380px;
+    }
+    /*** Navigation path ***/
+    /* only show on larger screen */
+    .nav-path {
+      display: inherit;
+      font-style: italic;
+      font-weight: 900;
+      position: absolute;
+      top: -2px;
+      left: 60px;
+    }
+    .nav-path a {
+      color: black;
+      padding: 0px 2px 0px 2px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-path a:hover {
+      color: #e4bd32;
     }
   }
 

@@ -43,6 +43,11 @@
    */
   padding-left: 1.04166666%;
   padding-right: 1.04166666%;
+  border-bottom: 2px solid black;
+}
+
+.final {
+  border-bottom: none;
 }
 
 .col-66 {
@@ -87,6 +92,12 @@
 
   /* hidden column, for padding */
   .col-66 {
-  display: inline;
-}
+    display: inline;
+  }
+  .row {
+    border-bottom: 2px solid black;
+  }
+  .col-1, .col-3, .col-4, .col-6, .col-9, .col-12, .final{
+    border-bottom: none;
+  }
 }
